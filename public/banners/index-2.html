@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+        integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <script>
+
+        let style = `<style>
+                        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+                        #second-ad {
+                            margin-left: auto;
+                            margin-right: auto;
+                            text-align: center;
+                            overflow: hidden;
+                            width: 300px;
+                            height: 800px;
+                            display: block;
+                            background: #ffb000;
+                            opacity: 1;
+                            position: relative
+                        }
+
+                        #money {
+                            position: absolute;
+                            right: 28%;
+                            bottom: 18%;
+                            opacity: 0;
+                            z-index: 3;
+                            transform: rotate(20deg);
+                        }
+
+                        #hand {
+                            position: absolute;
+                            right: -162%;
+                            bottom: -15%;
+                            z-index: 2;
+                            transform: rotate(20deg);
+                        }
+
+                        #computer {
+                            position: absolute;
+                            right: -110%;
+                            bottom: 15%;
+                            z-index: 1;
+                        }
+
+                        #ad-solutions-logo {
+                            background: white;
+                            opacity: 0;
+                            z-index: 3;
+                            position: absolute;
+                            left: 6%;
+                            right: 6%;
+                            display: block;
+                            width: 80%;
+                            padding: 30px 10px;
+                            border-radius: 20px;
+                            top: 21%;
+                        }
+
+                        #ad-text {
+                            width: 90%;
+                            position: absolute;
+                            left: 5%;
+                            right: 5%;
+                            top: 12%;
+                            font-family: 'Dosis', sans-serif;
+                            color: #222;
+                            font-size: 48px;
+                        }
+
+                        #design1 {
+                            position: absolute;
+                            right: 0;
+                            bottom: 25px;
+                            z-index: 0;
+                            opacity: 0
+                        }
+
+                        #design2 {
+                            position: absolute;
+                            left: 0;
+                            top: 25px;
+                            z-index: 0;
+                            opacity: 0
+                        }
+                    </style>`
+
+        let secondAd = `<div id="second-ad">
+                            <h1 id="ad-text"> Rich Media Ads for Maximum ROI</h1>
+                            <div id="ad-solutions-logo" style="">
+                                <img src="https://www.adsolutions.com/wp-content/uploads/2018/05/Untitled-3-1.png"
+                                    width="80%" height="auto" />
+                            </div>
+                            <img id="money" src="{img/money.png}" width="171" height="124" />
+                            <img id="hand" src="img/hand.png" width="283" height="166" />
+                            <img id="computer" src="img/computer.png" width="293" height="280" />
+                            <img id="design1" src="img/design1.png" width="195" height="30" />
+                            <img id="design2" src="img/design2.png" width="195" height="14" />
+                        </div>`
+        $('body').prepend(style)
+
+        setTimeout(() => {
+
+            $('body').prepend(secondAd)
+
+            $.when(
+                $('#design1').animate({ opacity: '1' }, { duration: 1000, easing: 'easeInOutBack' }).promise(),
+                $('#design2').animate({ opacity: '1' }, { duration: 1000, easing: 'easeInOutBack' }).promise(),
+                $('#computer').animate({ right: '-12%' }, { duration: 1500, easing: 'easeInOutBack' }).promise()
+            ).done(() => {
+                $('#hand').animate({ right: '-35%', bottom: '12%' }, { duration: 1500, easing: 'easeInOutBack' }).promise()
+            }).done(() => {
+                $('#money').delay(500).animate({ opacity: '1', bottom: '42%', right: '15%' }, { duration: 2200, easing: 'easeInOutBack' }).promise()
+            }).done(() => {
+                $('#ad-text').animate({ opacity: '0' }, { duration: 1000, easing: 'easeInOutBack' })
+                $('#ad-solutions-logo').delay(1200).animate({ opacity: '1' }, { duration: 1200, easing: 'easeInOutBack' })
+            })
+        }, 100)
+
+    </script>
+</body>
+
+</html>
