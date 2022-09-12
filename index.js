@@ -10,4 +10,4 @@ http.createServer(function (req, res) {
 }).listen(42780);
 
 const myAddr = 'http://localhost:42780/';
-open('http://preview.adsolutions.com/?url=ad01&placements[]=leader1&placementIds[leader1][tag]='+myAddr);
+open('https://preview.adsolutions.com/?url=ad01&placements[]=leader1&placementIds[leader1][tag]='+myAddr);

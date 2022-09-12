@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.6.1",
+    "jquery.animate": "^1.8.9",
+    "jsdom": "^20.0.0",
     "open": "^8.2.1"
   }
 }
