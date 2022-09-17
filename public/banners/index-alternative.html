@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+        body {
+display: block;
+            width: 1024px;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #first-ad {
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: #ffb000;
+            opacity: 1;
+            position: relative
+        }
+
+        @keyframes money-animation {
+            from {
+                opacity: 0;
+                top: -10%;
+                right: 28%;
+            }
+
+            to {
+                opacity: 1;
+                top: -5%;
+                right: 20%;
+            }
+        }
+
+        #money {
+            width: 100px;
+            height: auto;
+            position: absolute;
+            right: 28%;
+            top: -10%;
+            opacity: 0;
+            z-index: 3;
+            animation-name: money-animation;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 2.5s;
+            animation-fill-mode: forwards;
+            /*Safari and Chrome*/
+            -webkit-animation-name: money-animation;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-delay: 2.5s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @keyframes hand-animation {
+            from {
+                right: 12%;
+                bottom: -105%;
+            }
+
+            to {
+                right: 20%;
+                bottom: -40%;
+            }
+        }
+
+
+        @-webkit-keyframes hand-animation {
+            from {
+                right: 12%;
+                bottom: -105%;
+            }
+
+            to {
+                right: 20%;
+                bottom: -40%;
+            }
+        }
+
+
+        #hand {
+            width: 150px;
+            height: auto;
+            position: absolute;
+            right: 12%;
+            bottom: -105%;
+            z-index: 2;
+            transform: rotate(20deg);
+            animation-name: hand-animation;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1.5s;
+            animation-fill-mode: forwards;
+            /*Safari and Chrome*/
+            -webkit-animation-name: hand-animation;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-delay: 1.5s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @keyframes computer-animation {
+            from {
+                right: -20%;
+            }
+
+            to {
+                right: 23%;
+            }
+        }
+
+        /*Safari and Chrome*/
+        @-webkit-keyframes computer-animation {
+            from {
+                right: -20%
+            }
+
+            to {
+                right: 23%
+            }
+        }
+
+        #computer {
+            width: 155px;
+            height: auto;
+            position: absolute;
+            right: -20%;
+            top: -20%;
+            z-index: 1;
+            animation-name: computer-animation;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+            /*Safari and Chrome*/
+            -webkit-animation-name: computer-animation;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-delay: 0.5s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        #ad-solutions-logo {
+            background: white;
+            opacity: 0;
+            z-index: 3;
+            display: block;
+            width: 30%;
+			margin-left: 10%;
+			margin-right: auto;
+			margin-top: 27px;
+            padding: 10px;
+            border-radius: 20px;
+            animation-name: design-animations;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 3.75s;
+            animation-fill-mode: forwards;
+            /*Safari and Chrome*/
+            -webkit-animation-name: design-animations;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-delay: 3.75s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        #ad-text {
+            width: 50%;
+            position: absolute;
+            left: 5%;
+            font-family: 'Dosis', sans-serif;
+            color: #222;
+            font-size: 38px;
+            animation-name: design-animations;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 3.5s;
+            animation-fill-mode: forwards;
+            animation-direction: reverse;
+            /*Safari and Chrome*/
+            -webkit-animation-name: design-animations;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-delay: 3.5s;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-direction: reverse;
+        }
+
+        #design1 {
+            width: 165px;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation-name: design-animations;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+
+            /*Safari and Chrome*/
+            -webkit-animation-name: design-animations;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-delay: 0.5s;
+            -webkit-animation-fill-mode: forwards;
+
+        }
+
+        @keyframes design-animations {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /*Safari and Chrome*/
+        @-webkit-keyframes design-animations {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #design2 {
+            width: 165px;
+            height: auto;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            animation-name: design-animations;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+            /*Safari and Chrome*/
+            -webkit-animation-name: design-animations;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-delay: 0.5s;
+            -webkit-animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first-ad">
+        <img id="design1" src="img/design1.png" width="195" height="30" />
+        <h1 id="ad-text"
+            style="font-family: 'Dosis', sans-serif; font-size: 38px;"> Rich
+            Media Ads for Maximum ROI</h1>
+        <div id="ad-solutions-logo">
+            <img src="https://www.adsolutions.com/wp-content/uploads/2018/05/Untitled-3-1.png"
+                width="60%" height="auto" />
+        </div>
+        <img id="money" src="img/money.png" width="171" height="124" />
+        <img id="hand" src="img/hand.png" width="283" height="166" />
+        <img id="computer" src="img/computer.png" width="293" height="280" />
+        <img id="design2" src="img/design2.png" width="195" height="14" />
+
+    </div>
+
+</body>
+
+</html>
